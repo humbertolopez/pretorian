@@ -2,6 +2,10 @@
 <html>
 <head>
 	<title></title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+	<!-- encabezado wordpress -->
+	<?php wp_head(); ?>
+	<!-- fin encabezado wordpress -->	
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css' media="all">
 	<link href="<?php echo get_stylesheet_uri(); ?>" rel="stylesheet" type="text/css" media="all">
 </head>
