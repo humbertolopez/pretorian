@@ -28,29 +28,24 @@
 <!-- seccion de contacto rapido -->
 <?php get_template_part('contacto-rapido'); ?>
 <!--  fin seccion de contacto rapido -->
-<?php
-	$homeargs = new WP_Query(array(
-		'category_name' => 'general'
-		));
-	if($homeargs->have_posts()) : while($homeargs->have_posts()) : $homeargs->the_post();
-?>	
-<section id="content">
-	<?php
-		if(in_category('highlight')) {
-			?>
-				<h3 class="highlight"><?php the_title(); ?></h3>
-			<?php
-		} else {
-			?>
-				<h3><?php the_title(); ?></h3>
-			<?php
-		}			
-	?>
+<section id="content" class="home-content">
+	<h3>Tenemos comunicación permanente con las policías federales, la fiscalía general del estado y las policías municipales</h3>
+	<ul id="listado-logos-home">
+		<li><img src="<?php echo get_template_directory_uri(); ?>/img/home/jalisco.png"></li>
+		<li><img src="<?php echo get_template_directory_uri(); ?>/img/home/policia-municipal.png"></li>
+		<li><img src="<?php echo get_template_directory_uri(); ?>/img/home/policia-federal.png"></li>		
+	</ul>
+	<h3>Somos miembros de:</h3>
+	<ul id="listado-logos">
+		<li><img src="<?php echo get_template_directory_uri(); ?>/img/consulting/logos/camara-de-comercio.png"></li>
+		<li><img src="<?php echo get_template_directory_uri(); ?>/img/consulting/logos/asis.png"></li>
+		<li><img src="<?php echo get_template_directory_uri(); ?>/img/consulting/logos/alas.png"></li>
+		<li><img src="<?php echo get_template_directory_uri(); ?>/img/consulting/logos/fepasep.png"></li>
+		<li><img src="<?php echo get_template_directory_uri(); ?>/img/consulting/logos/cnsp.png"></li>
+		<li><img src="<?php echo get_template_directory_uri(); ?>/img/consulting/logos/basc.png"></li>
+	</ul>
+	<h3>Autorizados por la dirección general de seguridad privada de la secretaría de gobernación y el consejo estatal de seguridad pública del estado de Jalisco</h3>
 </section>
-<?php
-	endwhile; endif;
-	wp_reset_query();
-?>
 <section id="servicios-section" class="block">
 	<h1>Nuestros servicios se ajustan a tus necesidades</h1>
 	<ul class="block">
