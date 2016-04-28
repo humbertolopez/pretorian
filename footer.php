@@ -37,7 +37,11 @@
 			if(toppage <= 500) {
 				jQuery('#head').removeClass('collapse')
 			}
-		})
+		});
+		jQuery('.menu-icon').click(function(){
+			jQuery('#menu-sub-buttons').toggleClass('menu-visible'),
+			jQuery('#menu').toggleClass('menu-visible')
+		});
 	</script>
 </body>
 </html>

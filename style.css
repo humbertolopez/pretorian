@@ -138,7 +138,7 @@ p {
 	display: flex;
 	display: -webkit-flex;
 	display: -webkit-box;
-	display: -moz-box;
+	/* display: -moz-box; */
 	display: -ms-flexbox;
 	justify-content: center;
 	-webkit-justify-content: center;
@@ -229,6 +229,9 @@ header {
 #menu > li:hover {
 	color: #1185cf;
 	background: #d7d7d7;
+}
+#head .menu-icon {
+	visibility: hidden;
 }
 /* home */
 #portada {
@@ -336,7 +339,7 @@ header {
 	/* seccion de servicios */
 	/* servicios en portada */
 	#servicios-portada {
-		margin: 0 12.5%;
+		margin: 0 auto;
 		padding: 0;
 		position: absolute;
 		left: 0;
@@ -352,8 +355,8 @@ header {
 		min-height: 155px;
 		display: flex;
 		display: -webkit-flex;
-		/*display: -webkit-box;*/
-		display: -moz-box;
+		/*display: -webkit-box;
+		display: -moz-box; */
 		display: -ms-flexbox;
 		justify-content: center;
 		-webkit-justify-content: center;
@@ -369,8 +372,8 @@ header {
 		position: absolute;
 		display: flex;
 		display: -webkit-flex;
-		display: -webkit-box;
-		display: -moz-box;
+		/*display: -webkit-box;
+		display: -moz-box; */		
 		display: -ms-flexbox;
 		justify-content: center;
 		-webkit-justify-content: center;
@@ -395,29 +398,30 @@ header {
 		width: 75%;
 		height: 100%;
 		color: #fff;
-		top: 0;
-		right: 0;
+		top: 10%;
+		left: 20%;
 		padding: 150px 0 0 0;
-		margin: 0 25% 0 0;
+		margin: auto;
 		z-index: 2;
+		max-width: 1180px;
 	}
 	#portada .llamada:before {
 		content: "";
-		position: absolute;		
-		right: 250px;
-		top: -150px;
-		width: 9999px;
-		height: 100%;
-		background: rgba(11,51,112,0.75);
-		z-index: -1;
-		transform: skew(-55deg);
-		-webkit-transform: skew(-55deg);
-		-moz-transform: skew(-55deg);
-		-ms-transform: skew(-55deg);
+	    position: absolute;
+	    right: 580px;
+	    top: -150px;
+	    width: 9999px;
+	    height: 100%;
+	    background: rgba(11,51,112,0.75);
+	    z-index: -1;
+	    transform: skew(-55deg);
+	    -webkit-transform: skew(-55deg);
+	    -moz-transform: skew(-55deg);
+	    -ms-transform: skew(-55deg);
 	}
-	#portada .llamada h1, #portada-llamada h2, .llamada-servicios-seguridad-integral h1, .llamada-servicios-seguridad-integral h2 {
+	#portada .llamada h1, #portada .llamada h2, .llamada-servicios-seguridad-integral h1, .llamada-servicios-seguridad-integral h2, .llamada-personal h1, .llamada-personal h2 , .llamada-manuales h2, .llamada-manuales h1 {
 		margin: 0;
-		text-transform: none;		
+		text-transform: none;
 	}
 	/* fin llamada en portada */
 /* fin de home */
@@ -474,21 +478,50 @@ footer .wrapper, header .wrapper {
 }
 .contacto-rapido-wrapper {
 	width: 85%;
+	max-width: 1140px;
 	margin: auto;
 	color: #fff;
-	max-width: 1140px;
 }
-.contacto-rapido-wrapper div {
-	display: table-cell;
-	width: 25%;
+.contacto-rapido-wrapper div.contacto-rapido-cuarto {
 	float: left;
+	width: 22%;
+	margin: 0 1.5%;
+	display: flex;
+	flex-flow: column;
 }
 .contacto-rapido-wrapper h3 {
 	margin: 0;
 	text-align: left;
 }
-#wpcf7-f187-o1 input {
-	float: left;
+.contacto-rapido-wrapper input {
+    float: left;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 5px;
+}
+.contacto-rapido-wrapper .wpcf7-validation-errors {
+	border: 0;
+	display: none !important;
+}
+.contacto-rapido-wrapper span.wpcf7-not-valid-tip {
+	font-size: 0.75em;
+}
+.contacto-rapido-cuarto input.wpcf7-submit {
+	color: #fff;
+    background: #1185cf;
+    border: 1px solid transparent;
+    width: 60%;
+    margin: 0 20%;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.contacto-rapido-cuarto input.wpcf7-submit:hover {
+	color: #1185cf;
+	background: #fff;
+	border: 1px solid #1185cf;
+}
+.contacto-rapido-cuarto img.ajax-loader {
+	display: none;
 }
 /* fin formulario contacto rapido */
 /* categoria servicios seguridad integral */
@@ -588,7 +621,7 @@ footer .wrapper, header .wrapper {
 .llamada-servicios-seguridad-integral {
 	position: absolute;
 	width: 100%;
-	height: 30%;
+	height: 100%;
 	color: #fff;
 	bottom: 0;
 	right: 0;
@@ -597,18 +630,23 @@ footer .wrapper, header .wrapper {
 }
 .llamada-servicios-seguridad-integral:before {
 	content: "";
+    position: absolute;
+    width: 9999px;
+    height: 999px;
+    background: rgba(0,66,141,0.50);
+    z-index: -1;
+    top: -75px;
+    left: 0;
+    right: 0;
+    transform: skewY(-7deg);
+    -webkit-transform: skewY(-7deg);
+    -moz-transform: skewY(-7deg);
+    -ms-transform: skewY(-7deg);
+}
+.llamada-servicios-seguridad-integral-wrapper {
 	position: absolute;
-	width: 100%;
-	height: 999px;
-	background: rgba(0,66,141,0.50);
-	z-index: -1;
-	top: 0;
-	left: 0;
-	right: 0;
-	transform: skewY(165deg);
-	-webkit-transform: skewY(165deg);
-	-moz-transform: skewY(165deg);
-	-ms-transform: skewY(165deg);
+    bottom: 5%;
+    right: 5%;
 }
 /* fin categoria servicios seguridad integral */
 
@@ -635,7 +673,7 @@ footer .wrapper, header .wrapper {
 		display: flex;
 		display: -webkit-flex;
 		/*display: -webkit-box;*/
-		display: -moz-box;
+		/*display: -moz-box;*/
 		display: -ms-flexbox;
 		flex-flow: row wrap;
 	}
@@ -740,27 +778,32 @@ footer .wrapper, header .wrapper {
 	/* */
 	.llamada-tecnologia {
 		position: absolute;
-		width: 75%;
+		width: 100%;
 		height: 100%;
 		color: #fff;
 		top: 0;
 		right: 0;
-		padding: 150px 0 0 0;
-		margin: 0 25% 0 0;
+		padding: 0;
+		margin: 0;
 		z-index: 2;
 	}
 	.llamada-tecnologia:before {
 		content: "";
-	    position: absolute;
-	    right: 0;    
-	    width: 9999px;
-	    height: 100%;
-	    background: rgba(11,51,112,0.75);
-	    z-index: -1;
-	    transform: skew(75deg);
-	    -webkit-transform: skew(75deg);
-	    -moz-transform: skew(75deg);
-	    -ms-transform: skew(75deg);
+		position: absolute;
+		right: 65%;
+		width: 9999px;
+		height: 100%;
+		background: rgba(11,51,112,0.75);
+		z-index: -1;
+		transform: skew(75deg);
+		-webkit-transform: skew(75deg);
+		-moz-transform: skew(75deg);
+		-ms-transform: skew(75deg);
+	}
+	.llamada-tecnologia-wrapper {
+		position: absolute;
+		bottom: 5%;
+		left: 10%;
 	}
 	.gallery-icon img {
 		border: 0px !important;
@@ -797,7 +840,7 @@ footer .wrapper, header .wrapper {
 	display: flex;
 	display: -webkit-flex;
 	/*display: -webkit-box;*/
-	display: -moz-box;
+	/*display: -moz-box;*/
 	display: -ms-flexbox;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -817,7 +860,7 @@ footer .wrapper, header .wrapper {
 	display: flex;
 	display: -webkit-flex;
 	/*display: -webkit-box;*/
-	display: -moz-box;
+	/*display: -moz-box;*/
 	display: -ms-flexbox;
 	flex-direction: column;
 	align-items: center;
@@ -851,8 +894,8 @@ footer .wrapper, header .wrapper {
 	max-width: 1140px;
 	display: flex;
 	display: -webkit-flex;
-	display: -webkit-box;
-	display: -moz-box;
+	/*display: -webkit-box;
+	display: -moz-box;*/
 	display: -ms-flexbox;
 	flex-wrap: wrap;
 	margin: 0 auto;
@@ -929,7 +972,7 @@ footer .wrapper, header .wrapper {
 	display: flex;
 	display: -webkit-flex;
 	/*display: -webkit-box;*/
-	display: -moz-box;
+	/*display: -moz-box;*/
 	display: -ms-flexbox;
 	width: 80%;
 	flex-wrap: wrap;
@@ -947,52 +990,49 @@ footer .wrapper, header .wrapper {
 }
 .llamada-personal {
 	position: absolute;
-	width: 75%;
-	height: 100%;
-	color: #fff;
-	top: 0;
-	right: 0;
-	padding: 150px 0 0 0;
-	margin: 0 25% 0 0;
-	z-index: 2;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    top: 0;
+    right: 0;    
+    z-index: 2;
 }
 .llamada-personal:before {
 	content: "";
-    position: absolute;
-    right: 0;    
-    width: 9999px;
-    height: 100%;
-    background: rgba(11,51,112,0.75);
-    z-index: -1;
-    transform: skew(75deg);
-    -webkit-transform: skew(75deg);
-    -moz-transform: skew(75deg);
-    -ms-transform: skew(75deg);
+	position: absolute;
+	left: 0;
+	bottom: -80%;
+	width: 100%;
+	height: 100%;
+	background: rgba(11,51,112,0.75);
+	z-index: -1;
+	transform: skewY(18deg);
+	-webkit-transform: skewY(18deg);
+	-moz-transform: skewY(18deg);
+	-ms-transform: skewY(18deg);
 }
 /* fin seccion personal */
 /* formularios */
 #formulario-contacto {
-	display: flex;
-	display: -webkit-flex;
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	flex-wrap: wrap;	
-	align-items: center;
+	padding: 60px 0;
 }
-.form {	
-	text-align: right;
-	flex-basis: 33%;
+.formulario-wrapper {
+	width: 75%;
+	max-width: 1140px;
+	margin: auto;
+	display: flex;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+}
+.form {
+	text-align: center;
 }
 .form p {
-	margin: 0 auto 30px auto;
+	margin: 0.9em 0;
 }
 .form h2 {
-	margin: 1.3em auto 0 auto;
-}
-.form p, .form h2 {
-	width: 300px;
-	text-align: center;
+	margin: 0;
 }
 .form input {
 	border: 0;
@@ -1008,29 +1048,51 @@ footer .wrapper, header .wrapper {
 	box-shadow: 2px 2px 7px #333e49;
 	width: 305px;
 }
-.titular-form .flechatitular {
-	background-color: #333e49;
-	color: #fff;
-	height: 400px;
-	display: flex;
-	display: -webkit-flex;
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	align-items: center;
-	flex-flow: column;
-	justify-content: center;
-	-webkit-justify-content: center;
-	text-align: left;
-	flex-basis: 40%;
-	padding-left: 30%;
-	padding-right: 10%;
+.formulario-wrapper > div {
+	width: 40%;
+	margin: 5%;
+	float: left;
+	position: relative;
 }
-.flecha-contacto {
-	border-left: 100px solid #333e49;
-	border-top: 200px solid transparent;
-	border-bottom: 200px solid transparent;
-	width: 0;
+.titularcentered {
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    position: absolute;
+    width: 100%;
+}
+.flechatitular {
+	margin: 30px auto;
+}
+.flechatitular h1, .flechatitular h2, .flechatitular h3 {
+	color: #fff;
+	margin: 0;
+	text-align: left;
+}
+.flechatitular:after {
+	content: "";
+	background: #333e49;
+	width: 9999px;
+	height: 50%;
+	position: absolute;
+	top: 0;
+	transform: skewX(25deg);
+	right: 0;
+	z-index: -1;
+}
+.flechatitular:before {
+	content: "";
+	background: #333e49;
+	width: 9999px;
+	height: 50%;
+	position: absolute;
+	bottom: 0;
+	transform: skewX(-25deg);
+	right: 0;
+	z-index: -1;
 }
 .titular-form h1, .titular-form h2, .titular-form h3 {
 	margin: 0;
@@ -1044,6 +1106,8 @@ footer .wrapper, header .wrapper {
 	text-transform: uppercase;
 	padding: 5px 30px;
 	position: relative;
+	box-shadow: none;
+	margin-top: 15px;
 }
 /* manuales */
 #manuales-descargas {
@@ -1057,8 +1121,8 @@ footer .wrapper, header .wrapper {
 	margin: auto;
 	display: flex;
 	display: -webkit-flex;
-	display: -webkit-box;
-	display: -moz-box;
+	/* display: -webkit-box; */
+	/* display: -moz-box; */
 	display: -ms-flexbox;
 	flex-wrap: wrap;
 }
@@ -1072,23 +1136,230 @@ footer .wrapper, header .wrapper {
 }
 .llamada-manuales {
 	position: absolute;
-	width: 75%;
-	height: 100%;
-	color: #fff;
-	top: 0;
-	right: 0;
-	padding: 150px 0 0 0;
-	margin: 0 25% 0 0;
-	z-index: 2;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    top: 0;
+    right: 0;    
+    z-index: 2;
 }
 .llamada-manuales:before {
 	content: "";
-    position: absolute;
-    right: 0;    
-    width: 9999px;
-    height: 100%;
-    background: rgba(11,51,112,0.75);
-    z-index: -1;
-    transform: skew(75deg);
+	position: absolute;
+	top: 75%;
+	width: 100%;
+	height: 100%;
+	background: rgba(11,51,112,0.75);
+	z-index: -1;
+	transform: skewY(20deg);
+	-webkit-transform: skewY(20deg);
+	-moz-transform: skewY(20deg);
+	-ms-transform: skewY(20deg);
+}
+.llamada-manuales-wrapper {
+	position: absolute;
+	left: 10%;
+	bottom: 5%;
 }
 /* fin manuales */
+/* media queries */
+@media only screen 
+  and (max-width: 768px) {
+
+  	header {
+	    width: 90%;
+    	padding: 0 5%;
+  	}
+  	#head {
+  		background: #fff;  		
+  	}
+  	#head .menu-icon {
+  		height: 34px;
+  		width: auto;
+  		position: absolute;
+  		top: 15px;
+  		right: 15px;
+  		visibility: visible;
+  	}
+  	#logo {
+  		position: relative;
+  		padding: 10px;
+  		clear: both;
+  		display: block;
+  		overflow: hidden;
+  	}
+  	#logo img, .collapse #logo img {
+  		width: 30%;
+  		height: auto;
+  	}
+  	#menu, #menu-sub-buttons {
+  		display: block;
+  		clear: both;
+  		overflow: hidden;
+  		width: 100%;
+  		margin: 10px 0;
+  		display: none;
+  	}
+  	.menu-visible {
+  		display: block !important;
+  	}
+  	#portada {
+  		width: 100%;
+  		height: auto;  		
+  	}
+  	#servicios-portada {
+  		display: none;  		
+  	}
+  	#portada .llamada, #llamada-consulting, .llamada-servicios-seguridad-integral {
+  		position: absolute;
+  		width: 100%;
+  		height: 100%;
+  		text-align: center;
+  		bottom: 0;
+  		left: 0;
+  		top: 0;
+  		right: 0;
+  		text-shadow: 0px 0px 10px #000;
+  	}
+  	#portada .llamada:before {
+  		display: none;
+  	}
+  	#portada img {
+  		margin-top: 58px;
+  		width: 100%
+  		height: auto;
+  	}
+  	.contacto-rapido-wrapper div.contacto-rapido-cuarto {
+	    width: 98%;
+	    margin: 1% 0;
+  	}
+  	#servicios-section li {
+  	    float: left;
+        width: 90%;
+        margin: 5%;
+        padding: 0;
+        list-style: none;
+  	}
+  	.formulario-wrapper {
+  	    width: 75%;
+  	    max-width: 1140px;
+  	    display: block;  	 
+  	}
+  	.formulario-wrapper > div {
+  		width: 100%;
+  		clear: both;
+  		overflow: hidden;
+  		display: block;
+  	}  	
+  	.flecha-titular {
+  		display: none;
+  	}
+  	.llamada-consulting, .llamada-tecnologia {
+  	    position: absolute;
+  	    width: 100%;
+  	    height: 100%;
+  	    color: #fff;
+  	    top: 0;
+  	    right: 0;
+  	    left: 0;
+  	    z-index: 2;
+  	}
+  	.llamada-consulting img, .llamada-tecnologia img {
+  		height: auto;
+  		width: 60%;
+  	}
+  	.titular-consulting > h2 {
+  		font-size: 1.2em;
+  	}
+  	#servicios-seguridad-integral ul.items-seguridad {
+  	    width: 90%;
+  	    text-align: center;
+  	}
+  	#servicios-seguridad-integral ul.items-seguridad li img {
+  	    float: none;
+  	    height: auto;
+  	    margin: 1%;
+  	}
+  	#servicios-seguridad-integral h2, #servicios-seguridad-integral p {
+  	    margin: 0;  	      	    
+  	    float: none;
+  	    max-width: 100%;
+  	}
+  	.cotiza-mejor-servicio {
+  	    padding: 0.5em;
+  	    position: relative;
+  	    color: white;
+  	    text-transform: uppercase;
+  	    font-weight: bold;
+  	    z-index: 777;
+  	    margin: 1em 0 !important;
+  	    width: 100%;
+  	    float: none !important;
+  	}
+  	.cotiza-mejor-servicio:before {
+  	    left: -2.5em;
+  	}
+  	#listado-seguridad {
+  		display: none;
+  	}
+  	#tecnologia-sistemas h1, #tecnologia-sistemas h3, #tecnologia-nuevas h1, #tecnologia-nuevas h3 {
+  	    color: #fff;
+  	    margin: .5em auto;
+  	    max-width: 80%;
+  	    text-align: center;  	    
+  	}
+  	#tecnologia-sistemas h1, #tecnologia-nuevas h1 {
+  		font-size: 1.4em;
+  	}
+  	#listado-sistemas > li {
+  	    flex-basis: 100%;
+  	    align-items: center;
+  	    justify-content: center;
+  	    -webkit-justify-content: center;
+  	    position: relative;
+  	    list-style: none;
+  	    margin: 1em 0;
+  	}
+  	.pop-up-icon img {
+  		width: 50%;
+  		height: auto;
+  	}
+  	.tecnologia-pop-up {
+  	    background-color: transparent;
+  	    width: 100%;
+  	    height: auto;
+  	    padding: 1%;
+  	    margin: 0;
+  	    opacity: 0.0;
+  	    transform: translate(0,0);
+  	    -webkit-transform: translate(0,0);
+  	    -moz-transform: translate(0,0);
+  	    -ms-transform: translate(0,0);
+  	    position: relative;
+  	    opacity: 1.0;
+  	    top: 0;
+  	    left: 0;
+  	    z-index: 1;
+  	    color: #fff;
+  	}
+  	.tecnologia-pop-up h4 {
+  	    display: none;
+  	}
+  	.tecnologia-pop-up img {
+  	    display: none;
+  	}
+  	.tecnologia-pop-up p, .tecnologia-pop-up ul {
+  	    color: #fff;
+  	}
+  	#listado-nuevas-tecnologias > li {
+  	    flex-basis: 100%;
+  	    margin: 5% 0;  	    
+  	}
+  	#gallery-1 .gallery-item {
+  	    float: left;
+  	    margin: 10px 5%;
+  	    text-align: center;
+  	    width: 90% !important;  	    
+  	}
+}
+/* media queries */

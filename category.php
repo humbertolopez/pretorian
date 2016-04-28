@@ -5,9 +5,11 @@
 		?>
 			<img class="portada-img" src="<?php echo get_template_directory_uri(); ?>/img/servicios-seguridad-integral/header-seguridad-integral.jpg">
 			<div class="llamada-<?php echo get_category(get_query_var('cat'))->slug; ?>">
-				<h2>En servicios de</h2>
-				<h1>seguridad integral</h1>
-				<h2>brindamos la mayor cobertura</h2>
+				<div class="llamada-servicios-seguridad-integral-wrapper">
+					<h2>En servicios de</h2>
+					<h1>seguridad integral</h1>
+					<h2>brindamos la mayor cobertura</h2>
+				</div>
 			</div>
 		<?php
 		} else if(is_category('consulting')) {
@@ -21,23 +23,32 @@
 			?>
 				<img class="portada-img" src="<?php echo get_template_directory_uri(); ?>/img/personal/personal-header.jpg">
 				<div class="llamada-<?php echo get_category(get_query_var('cat'))->slug; ?>">
-					<h2>Personal confiable, capacitado y certificado</h2>
-					<h3>para cualquier situación</h3>
+					<div class="llamada-tecnologia-wrapper">
+						<h2>Personal confiable,</h2>
+						<h2>capacitado y certificado</h2>
+						<h1>para cualquier situación</h1>
+					</div>
 				</div>
 			<?php
 		} else if(is_category('tecnologia')) {
 			?>
 				<img class="portada-img" src="<?php echo get_template_directory_uri(); ?>/img/tecnologia/header-tecnologia.jpg">
 				<div class="llamada-<?php echo get_category(get_query_var('cat'))->slug; ?>">
-					<img src="<?php echo get_template_directory_uri(); ?>/img/tecnologia/alarmas-pretorian.svg">
+					<div class="llamada-tecnologia-wrapper">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/tecnologia/alarmas-pretorian.svg">
+					</div>
 				</div>
 			<?php
 		} else if(is_category('manuales')) {
 			?>
 				<img class="portada-img" src="<?php echo get_template_directory_uri(); ?>/img/manuales/manuales-header.jpg">
 				<div class="llamada-<?php echo get_category(get_query_var('cat'))->slug; ?>">
-					<h1>Manuales para su seguridad</h1>
-					<h2>Descarga nuestro material para estar un paso adelante</h2>
+					<div class="llamada-manuales-wrapper">
+						<h1>Manuales para</h1>
+						<h2>su seguridad</h1>
+						<h2>Descarga nuestro material</h2>
+						<h2>para estar un paso adelante</h2>
+					</div>
 				</div>
 			<?php
 		}
@@ -216,24 +227,12 @@
 					</ul>
 				</section>
 			<?php
+		} else if (is_category('contacto')) {
+			get_template_part('formulario-general');
 		}
-	?>
-	<section id="formulario-contacto" class="block">
-		<div class="titular-form">
-			<div class="flechatitular">
-				<h1>Protégete con</h1>
-				<h2>los mejores especialistas</h2>
-				<h3>consolidados a nivel nacional en sistemas integrales de seguridad y prevención de riesgos</h3>
-			</div>
-		</div>
-		<div class="flecha-contacto">
-			
-		</div>
-		<div class="form">
-			<h2>Contáctanos</h2>
-			<p>Un especialista te cotizará los servicios que mejor se ajusten a tus necesidades.</p>
-			<?php echo do_shortcode('[contact-form-7 id="131" title="Formulario general de contacto"]'); ?>
-		</div>
-	</section>
+	?>	
 <!-- cuerpo de categoria -->
+<!-- formulario general -->
+<?php get_template_part('formulario-general'); ?>
+<!-- formulario general -->
 <?php get_footer(); ?>

@@ -4,7 +4,8 @@
 <section id="portada" class="block">
 	<img class="portada-img" src="<?php echo get_template_directory_uri(); ?>/img/home/index-portada.jpg">
 	<div class="llamada">
-		<h2>Brindando seguridad y confianza</h2>
+		<h2>Brindando</h2>
+		<h2>seguridad y confianza</h2>
 		<h1>desde 1998</h1>
 	</div>
 	<ul id="servicios-portada">
@@ -72,4 +73,7 @@
 	</div>
 </section>
 <!-- fin de index -->
+<!-- formulario general -->
+<?php get_template_part('formulario-general'); ?>
+<!-- formulario general -->
 <?php get_footer(); ?>

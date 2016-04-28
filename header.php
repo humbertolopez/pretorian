@@ -40,5 +40,6 @@
 				<li class="menu-sub-buttons-skew"><strong>Cotiza</strong> 3848.8458 / 3848.8459</li>
 			</ul>
 		</div>
+		<img src="<?php echo get_template_directory_uri(); ?>/img/menu-icon.svg" class="menu-icon">
 	</header>
 	<!-- fin de header -->
